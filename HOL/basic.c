@@ -28,8 +28,8 @@ int main(int argc, char * argv[]){
   fprintf(stderr, "Create a fake chunk on the stack");
   fprintf(stderr, "Set the fwd pointer to the victim_chunk in order to bypass the check of small bin corrupted"
          "in second to the last malloc, which putting stack address on smallbin list\n");
-  stack_buffer_1[0] = 0;hardening
-  stack_buffer_1[1] = 0;hardening
+  stack_buffer_1[0] = 0;
+  stack_buffer_1[1] = 0;
   stack_buffer_1[2] = victim_chunk;
 
   fprintf(stderr, "Set the bk pointer to stack_buffer_2 and set the fwd pointer of stack_buffer_2 to point to stack_buffer_1 "
