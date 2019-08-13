@@ -2,8 +2,8 @@ from pwn import *
 
 context(os='linux',arch='amd64',log_level='debug')
 
-#p = process("./weapon");
-p=remote("139.180.216.34",8888)
+p = process("./weapon");
+#p=remote("139.180.216.34",8888)
 libc=ELF("./libc-2.23.so")
 
 def g(p,data=False):
@@ -50,7 +50,7 @@ def edit2(idx,data):
 	p.sendline(str(3))
 	sleep(0.1)
 	p.sendline(str(idx))	
-        sleep(0.1)
+    sleep(0.1)
 	p.send(data)
 
 
